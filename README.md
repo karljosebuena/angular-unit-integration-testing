@@ -23,15 +23,15 @@ In this course, Mosh, author of several best selling courses on Udemy, takes you
 
 
 You'll learn about: 
-### Automated testing concepts and tools
-### What to test and how 
-### Writing clean, maintainable and trustworthy tests that don't lie  
-### Tracking how much of your code is covered by tests 
-### Testing re-usable components
-### Testing templates
-### Testing forms
-### Testing confirmation boxes
-### Testing navigation 
-### Testing attribute directives
-### Mocking dependencies 
-### Working with asynchronous operations
+## Automated testing concepts and tools
+## What to test and how 
+## Writing clean, maintainable and trustworthy tests that don't lie  
+## Tracking how much of your code is covered by tests 
+## Testing re-usable components
+## Testing templates
+## Testing forms
+## Testing confirmation boxes
+## Testing navigation 
+## Testing attribute directives
+## Mocking dependencies 
+## Working with asynchronous operations
