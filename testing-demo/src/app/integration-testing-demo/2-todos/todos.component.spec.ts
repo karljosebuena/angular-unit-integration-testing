@@ -27,7 +27,7 @@ describe('TodosComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load todos from the server', () => {
+  it('should load todos from the server on init', () => {
     const response = [1, 2, 3];
     const service = TestBed.get(TodoService);
     spyOn(service, 'getTodos').and.returnValue(
@@ -37,5 +37,21 @@ describe('TodosComponent', () => {
     fixture.detectChanges();
 
     expect(component.todos).toBe(response);
+  });
+
+  it('should load todos from the server on ngOnInitPromise', async () => {
+    const response = [1, 2, 3];
+    const service = TestBed.get(TodoService);
+    spyOn(service, 'getTodosPromise').and.returnValue(
+      Promise.resolve(response)
+    );
+
+    fixture.detectChanges();
+
+    fixture.whenStable()
+      .then(() => {
+        expect(component.todos).toBe(response);
+      })
+
   });
 });

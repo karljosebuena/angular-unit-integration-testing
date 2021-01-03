@@ -10,10 +10,18 @@ export class TodosComponent implements OnInit {
   todos: any[] = [];
   message;
 
-  constructor(private service: TodoService) {}
+  constructor(private service: TodoService) { }
 
   ngOnInit() {
     this.service.getTodos().subscribe(t => this.todos = t);
+  }
+
+  ngOnInitPromise() {
+    this.service.getTodosPromise()
+      .then(t => {
+        this.todos = t
+      })
+      .catch(e => console.log(e))
   }
 
   add() {
